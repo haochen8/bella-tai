@@ -7,10 +7,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Menu", href: "#menu" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Hem", href: "#home" },
+    { name: "Meny", href: "#menu" },
+    { name: "Om oss", href: "#about" },
+    { name: "Kontakt", href: "#contact" },
   ];
 
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <Logo />
 
-          {/* Desktop Navigation */}
+          {/* Navigering för desktop */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -38,11 +38,11 @@ const Navbar = () => {
               <span className="font-medium">(123) 456-7890</span>
             </a>
             <Button variant="gold" size="default">
-              Order Now
+              Beställ nu
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Menyknapp för mobil */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
@@ -51,7 +51,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Navigering för mobil */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             {navLinks.map((link) => (
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <span>(123) 456-7890</span>
               </a>
               <Button variant="gold" className="w-full mt-3">
-                Order Now
+                Beställ nu
               </Button>
             </div>
           </div>

@@ -9,8 +9,8 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Logo className="mb-4" />
             <p className="text-background/70 max-w-sm leading-relaxed">
-              Bringing the authentic flavors of Thailand to your doorstep. 
-              Quality ingredients, traditional recipes, unforgettable taste.
+              Vi tar de autentiska smakerna från Thailand till din dörr.
+              Kvalitetsingredienser, traditionella recept, oförglömlig smak.
             </p>
             <div className="flex gap-4 mt-6">
               <a href="#" className="bg-background/10 p-2 rounded-full hover:bg-background/20 transition-colors">
@@ -26,29 +26,29 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-serif font-bold text-background mb-4">Quick Links</h4>
+            <h4 className="font-serif font-bold text-background mb-4">Snabblänkar</h4>
             <ul className="space-y-2">
-              <li><a href="#menu" className="text-background/70 hover:text-background transition-colors">Menu</a></li>
-              <li><a href="#about" className="text-background/70 hover:text-background transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-background/70 hover:text-background transition-colors">Contact</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Order Online</a></li>
+              <li><a href="#menu" className="text-background/70 hover:text-background transition-colors">Meny</a></li>
+              <li><a href="#about" className="text-background/70 hover:text-background transition-colors">Om oss</a></li>
+              <li><a href="#contact" className="text-background/70 hover:text-background transition-colors">Kontakt</a></li>
+              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Beställ online</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-serif font-bold text-background mb-4">Opening Hours</h4>
+            <h4 className="font-serif font-bold text-background mb-4">Öppettider</h4>
             <ul className="space-y-2 text-background/70">
               <li className="flex justify-between">
-                <span>Mon - Fri</span>
-                <span>11am - 10pm</span>
+                <span>Mån - Fre</span>
+                <span>11:00 - 22:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Saturday</span>
-                <span>12pm - 11pm</span>
+                <span>Lördag</span>
+                <span>12:00 - 23:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Sunday</span>
-                <span>12pm - 10pm</span>
+                <span>Söndag</span>
+                <span>12:00 - 22:00</span>
               </li>
             </ul>
           </div>
@@ -56,7 +56,7 @@ const Footer = () => {
 
         <div className="border-t border-background/10 pt-8 text-center">
           <p className="text-background/50 text-sm">
-            © 2024 Bella Thai. All rights reserved.
+            © 2024 Bella Thai. Alla rättigheter förbehållna.
           </p>
         </div>
       </div>

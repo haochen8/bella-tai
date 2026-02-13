@@ -1,58 +1,58 @@
-# Welcome to your Lovable project
+# Välkommen till ditt Lovable-projekt
 
-## Project info
+## Projektinformation
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-## How can I edit this code?
+## Hur kan jag redigera koden?
 
-There are several ways of editing your application.
+Det finns flera sätt att redigera applikationen.
 
-**Use Lovable**
+**Använd Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Besök [Lovable-projektet](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) och börja prompta.
 
-Changes made via Lovable will be committed automatically to this repo.
+Ändringar som görs via Lovable committas automatiskt till detta repo.
 
-**Use your preferred IDE**
+**Använd din föredragna IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Om du vill arbeta lokalt i din egen IDE kan du klona detta repo och pusha ändringar. Pushade ändringar kommer också att speglas i Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Det enda kravet är att Node.js och npm är installerade. [Installera med nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Follow these steps:
+Följ dessa steg:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Steg 1: Klona repot med projektets Git-URL.
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Steg 2: Gå till projektkatalogen.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Steg 3: Installera nödvändiga beroenden.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Steg 4: Starta utvecklingsservern med automatisk omladdning och direkt förhandsvisning.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**Redigera en fil direkt i GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Gå till önskad fil eller filer.
+- Klicka på knappen "Edit" (pennikonen) uppe till höger i filvyn.
+- Gör dina ändringar och committa dem.
 
-**Use GitHub Codespaces**
+**Använd GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Gå till startsidan för ditt repository.
+- Klicka på knappen "Code" (grön knapp) uppe till höger.
+- Välj fliken "Codespaces".
+- Klicka på "New codespace" för att starta en ny Codespace-miljö.
+- Redigera filer direkt i Codespace och committa samt pusha ändringarna när du är klar.
 
-## What technologies are used for this project?
+## Vilka tekniker används i projektet?
 
-This project is built with:
+Projektet är byggt med:
 
 - Vite
 - TypeScript
@@ -60,14 +60,14 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Hur kan jag driftsätta projektet?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Öppna [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) och klicka på Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Kan jag koppla en egen domän till mitt Lovable-projekt?
 
-Yes, you can!
+Ja, det går bra.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+För att koppla en domän, gå till Project > Settings > Domains och klicka på Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Läs mer här: [Konfigurera en egen domän](https://docs.lovable.dev/features/custom-domain#custom-domain)

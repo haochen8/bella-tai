@@ -5,28 +5,28 @@ import springRollsImage from "@/assets/spring-rolls.jpg";
 
 const dishes = [
   {
-    name: "Green Curry",
-    description: "Creamy coconut curry with Thai basil, bamboo shoots & your choice of protein",
+    name: "Grön curry",
+    description: "Krämig kokoscurry med thailändsk basilika, bambuskott och valfritt protein",
     price: "£12.95",
     image: greenCurryImage,
     rating: 4.9,
-    tag: "Chef's Pick",
+    tag: "Kockens val",
   },
   {
-    name: "Tom Yum Soup",
-    description: "Hot & sour soup with lemongrass, galangal, lime leaves & fresh prawns",
+    name: "Tom Yum-soppa",
+    description: "Het och syrlig soppa med citrongräs, galangal, limeblad och färska räkor",
     price: "£9.95",
     image: tomYumImage,
     rating: 4.8,
-    tag: "Spicy",
+    tag: "Stark",
   },
   {
-    name: "Crispy Spring Rolls",
-    description: "Golden fried rolls with vegetables served with sweet chili sauce",
+    name: "Krispiga vårrullar",
+    description: "Gyllenbruna friterade rullar med grönsaker serverade med söt chilisås",
     price: "£6.95",
     image: springRollsImage,
     rating: 4.7,
-    tag: "Popular",
+    tag: "Populär",
   },
 ];
 
@@ -36,13 +36,13 @@ const FeaturedDishes = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="inline-block bg-secondary/20 text-secondary-foreground px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Customer Favorites
+            Kundfavoriter
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Featured <span className="text-gradient-gold">Dishes</span>
+            Utvalda <span className="text-gradient-gold">rätter</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Discover our most loved Thai dishes, prepared with authentic recipes and the freshest ingredients
+            Upptäck våra mest älskade thailändska rätter, tillagade med autentiska recept och de färskaste ingredienserna
           </p>
         </div>
 
@@ -80,7 +80,7 @@ const FeaturedDishes = () => {
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-serif font-bold text-primary">{dish.price}</span>
                   <button className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors">
-                    Add to Order
+                    Lägg till
                   </button>
                 </div>
               </div>

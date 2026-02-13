@@ -6,26 +6,26 @@ import tomYumImage from "@/assets/tom-yum.jpg";
 import springRollsImage from "@/assets/spring-rolls.jpg";
 import mangoStickyRiceImage from "@/assets/mango-sticky-rice.jpg";
 
-const categories = ["All", "Starters", "Curries", "Noodles", "Soups", "Desserts"];
+const categories = ["Alla", "Förrätter", "Curry", "Nudlar", "Soppor", "Desserter"];
 
 const menuItems = [
-  { name: "Crispy Spring Rolls", category: "Starters", price: "£6.95", image: springRollsImage },
-  { name: "Satay Chicken Skewers", category: "Starters", price: "£7.95", image: springRollsImage },
-  { name: "Green Curry", category: "Curries", price: "£12.95", image: greenCurryImage },
-  { name: "Red Curry", category: "Curries", price: "£12.95", image: redCurryImage },
-  { name: "Massaman Curry", category: "Curries", price: "£13.95", image: redCurryImage },
-  { name: "Pad Thai", category: "Noodles", price: "£11.95", image: padThaiImage },
-  { name: "Pad See Ew", category: "Noodles", price: "£10.95", image: padThaiImage },
-  { name: "Tom Yum Soup", category: "Soups", price: "£9.95", image: tomYumImage },
-  { name: "Tom Kha Gai", category: "Soups", price: "£9.95", image: tomYumImage },
-  { name: "Mango Sticky Rice", category: "Desserts", price: "£6.50", image: mangoStickyRiceImage },
-  { name: "Coconut Ice Cream", category: "Desserts", price: "£5.50", image: mangoStickyRiceImage },
+  { name: "Krispiga vårrullar", category: "Förrätter", price: "£6.95", image: springRollsImage },
+  { name: "Satay-kycklingspett", category: "Förrätter", price: "£7.95", image: springRollsImage },
+  { name: "Grön curry", category: "Curry", price: "£12.95", image: greenCurryImage },
+  { name: "Röd curry", category: "Curry", price: "£12.95", image: redCurryImage },
+  { name: "Massaman curry", category: "Curry", price: "£13.95", image: redCurryImage },
+  { name: "Pad Thai", category: "Nudlar", price: "£11.95", image: padThaiImage },
+  { name: "Pad See Ew", category: "Nudlar", price: "£10.95", image: padThaiImage },
+  { name: "Tom Yum-soppa", category: "Soppor", price: "£9.95", image: tomYumImage },
+  { name: "Tom Kha Gai", category: "Soppor", price: "£9.95", image: tomYumImage },
+  { name: "Mango sticky rice", category: "Desserter", price: "£6.50", image: mangoStickyRiceImage },
+  { name: "Kokosglass", category: "Desserter", price: "£5.50", image: mangoStickyRiceImage },
 ];
 
 const MenuSection = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Alla");
 
-  const filteredItems = activeCategory === "All" 
+  const filteredItems = activeCategory === "Alla"
     ? menuItems 
     : menuItems.filter(item => item.category === activeCategory);
 
@@ -34,17 +34,17 @@ const MenuSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Our Menu
+            Vår meny
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Explore Our <span className="text-gradient-gold">Thai Dishes</span>
+            Utforska våra <span className="text-gradient-gold">thailändska rätter</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            From aromatic curries to classic noodles, discover the full range of authentic Thai flavors
+            Från aromatiska curryrätter till klassiska nudlar, upptäck hela utbudet av autentiska thailändska smaker
           </p>
         </div>
 
-        {/* Category Filter */}
+        {/* Kategorifilter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
@@ -61,7 +61,7 @@ const MenuSection = () => {
           ))}
         </div>
 
-        {/* Menu Grid */}
+        {/* Menyrutnät */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredItems.map((item, index) => (
             <div
