@@ -71,3 +71,21 @@ Ja, det går bra.
 För att koppla en domän, gå till Project > Settings > Domains och klicka på Connect Domain.
 
 Läs mer här: [Konfigurera en egen domän](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Beställning och e-postbekräftelse
+
+Projektet innehåller nu ett beställningsflöde:
+
+- Kunden väljer en eller flera rätter från menyn
+- Kunden bekräftar med namn, e-post och telefonnummer
+- Bekräftelse skickas via e-post (EmailJS REST API)
+
+För att aktivera mailskick, skapa en `.env.local` med:
+
+```sh
+VITE_EMAILJS_SERVICE_ID=din_service_id
+VITE_EMAILJS_TEMPLATE_ID=din_template_id
+VITE_EMAILJS_PUBLIC_KEY=din_public_key
+```
+
+Notera: EmailJS-templaten behöver variabler som t.ex. `to_email`, `customer_name`, `order_items`, `total_price` och `order_id`.

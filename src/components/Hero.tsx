@@ -32,11 +32,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="xl">
-              Beställ takeaway
+            <Button asChild variant="hero" size="xl">
+              <a href="#bestallning">Beställ takeaway</a>
             </Button>
-            <Button variant="greenOutline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Se menyn
+            <Button asChild variant="greenOutline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <a href="#menu">Se menyn</a>
             </Button>
           </div>
 

@@ -37,8 +37,8 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               <span className="font-medium">(123) 456-7890</span>
             </a>
-            <Button variant="gold" size="default">
-              Beställ nu
+            <Button asChild variant="gold" size="default">
+              <a href="#bestallning">Beställ nu</a>
             </Button>
           </div>
 
@@ -69,8 +69,10 @@ const Navbar = () => {
                 <Phone className="w-4 h-4" />
                 <span>(123) 456-7890</span>
               </a>
-              <Button variant="gold" className="w-full mt-3">
-                Beställ nu
+              <Button asChild variant="gold" className="w-full mt-3">
+                <a href="#bestallning" onClick={() => setIsOpen(false)}>
+                  Beställ nu
+                </a>
               </Button>
             </div>
           </div>

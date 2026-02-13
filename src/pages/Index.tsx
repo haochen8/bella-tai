@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturedDishes from "@/components/FeaturedDishes";
 import MenuSection from "@/components/MenuSection";
+import OrderSection from "@/components/OrderSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <FeaturedDishes />
       <MenuSection />
+      <OrderSection />
       <AboutSection />
       <ContactSection />
       <Footer />

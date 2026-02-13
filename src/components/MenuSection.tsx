@@ -1,33 +1,17 @@
 import { useState } from "react";
-import redCurryImage from "@/assets/red-curry.jpg";
-import greenCurryImage from "@/assets/green-curry.jpg";
-import padThaiImage from "@/assets/pad-thai.jpg";
-import tomYumImage from "@/assets/tom-yum.jpg";
-import springRollsImage from "@/assets/spring-rolls.jpg";
-import mangoStickyRiceImage from "@/assets/mango-sticky-rice.jpg";
-
-const categories = ["Alla", "Förrätter", "Curry", "Nudlar", "Soppor", "Desserter"];
-
-const menuItems = [
-  { name: "Krispiga vårrullar", category: "Förrätter", price: "£6.95", image: springRollsImage },
-  { name: "Satay-kycklingspett", category: "Förrätter", price: "£7.95", image: springRollsImage },
-  { name: "Grön curry", category: "Curry", price: "£12.95", image: greenCurryImage },
-  { name: "Röd curry", category: "Curry", price: "£12.95", image: redCurryImage },
-  { name: "Massaman curry", category: "Curry", price: "£13.95", image: redCurryImage },
-  { name: "Pad Thai", category: "Nudlar", price: "£11.95", image: padThaiImage },
-  { name: "Pad See Ew", category: "Nudlar", price: "£10.95", image: padThaiImage },
-  { name: "Tom Yum-soppa", category: "Soppor", price: "£9.95", image: tomYumImage },
-  { name: "Tom Kha Gai", category: "Soppor", price: "£9.95", image: tomYumImage },
-  { name: "Mango sticky rice", category: "Desserter", price: "£6.50", image: mangoStickyRiceImage },
-  { name: "Kokosglass", category: "Desserter", price: "£5.50", image: mangoStickyRiceImage },
-];
+import { Button } from "@/components/ui/button";
+import { useOrder } from "@/contexts/OrderContext";
+import { formatMenuPrice, menuCategories, menuItems } from "@/data/menu";
 
 const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState("Alla");
+  const { addItem, lines } = useOrder();
 
   const filteredItems = activeCategory === "Alla"
-    ? menuItems 
-    : menuItems.filter(item => item.category === activeCategory);
+    ? menuItems
+    : menuItems.filter((item) => item.category === activeCategory);
+
+  const quantityByItemId = new Map(lines.map((line) => [line.id, line.quantity]));
 
   return (
     <section id="menu" className="py-20 bg-background">
@@ -46,7 +30,7 @@ const MenuSection = () => {
 
         {/* Kategorifilter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
+          {menuCategories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
@@ -63,9 +47,9 @@ const MenuSection = () => {
 
         {/* Menyrutnät */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredItems.map((item, index) => (
+          {filteredItems.map((item) => (
             <div
-              key={item.name}
+              key={item.id}
               className="bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 group"
             >
               <div className="relative h-40 overflow-hidden">
@@ -82,7 +66,15 @@ const MenuSection = () => {
                     <h3 className="font-serif font-bold text-foreground">{item.name}</h3>
                     <span className="text-xs text-muted-foreground">{item.category}</span>
                   </div>
-                  <span className="text-lg font-serif font-bold text-primary">{item.price}</span>
+                  <span className="text-lg font-serif font-bold text-primary">{formatMenuPrice(item.price)}</span>
+                </div>
+                <div className="mt-4 flex items-center justify-between gap-2">
+                  <span className="text-xs text-muted-foreground">
+                    {quantityByItemId.get(item.id) ? `${quantityByItemId.get(item.id)} st i beställning` : "Inte vald ännu"}
+                  </span>
+                  <Button size="sm" onClick={() => addItem(item)}>
+                    Lägg till
+                  </Button>
                 </div>
               </div>
             </div>

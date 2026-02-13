@@ -87,8 +87,8 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <Button variant="gold" size="xl" className="w-full">
-              Starta din beställning
+            <Button asChild variant="gold" size="xl" className="w-full">
+              <a href="#bestallning">Starta din beställning</a>
             </Button>
 
             <p className="text-center text-sm text-muted-foreground mt-4">
